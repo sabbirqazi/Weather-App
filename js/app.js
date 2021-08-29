@@ -9,7 +9,7 @@ const getWeatherForecast = ()=>{
     const city = cityText.value;
     
     console.log(city);
-    const url = `HTTPS://api.weatherapi.com/v1/current.json?key=a8bcc7b02eee4926b8d92058212908&q=${city}`
+    const url = `https://api.weatherapi.com/v1/current.json?key=a8bcc7b02eee4926b8d92058212908&q=${city}`
     console.log(url)
     if(city.length == 0){
         alert('Please Enter Valid a Name')
