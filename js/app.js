@@ -5,7 +5,8 @@ document.getElementById('search-button').addEventListener('click', function(e){
    
 })
 const getWeatherForecast = ()=>{
-    const city = document.getElementById('input-field').value;
+    const cityText = document.getElementById('input-field');
+    const city = cityText.value;
     
     console.log(city);
     const url = `http://api.weatherapi.com/v1/current.json?key=a8bcc7b02eee4926b8d92058212908&q=${city}`
@@ -18,7 +19,7 @@ const getWeatherForecast = ()=>{
     .then(res => res.json())
     .then(data => displayWeather(data))
     } 
-    city.value = '';  
+    cityText.value = '';  
 }
 
 
